@@ -89,23 +89,23 @@
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper with Coverflow Effect
+        
         const swiper = new Swiper('.swiper', {
-            effect: 'coverflow', // Coverflow effect
+            effect: 'coverflow', 
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 'auto',
             coverflowEffect: {
-                rotate: 50, // Rotate angle
-                stretch: 0, // Stretch space between slides
-                depth: 100, // Depth of 3D effect
-                modifier: 1, // Effect multiplier
-                slideShadows: true, // Enable shadow for slides
+                rotate: 50, 
+                stretch: 0, 
+                depth: 100, 
+                modifier: 1, 
+                slideShadows: true, 
             },
-            loop: true, // Infinite loop
+            loop: true, 
             autoplay: {
-                delay: 2000, // Time between transitions (in ms)
-                disableOnInteraction: false, // Keep autoplay after user interactions
+                delay: 2000, 
+                disableOnInteraction: false, 
             },
             pagination: {
                 el: '.swiper-pagination',
