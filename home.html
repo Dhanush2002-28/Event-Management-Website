@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JK Event Management</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -49,17 +51,65 @@
         <section class="about-sec">
             <p>About Us</p>
             <div class="about">
-                    Welcome to JK Event Management, your one-stop solution for crafting unforgettable experiences. We
-                    specialize in transforming events into spectacular celebrations, offering comprehensive services for
-                    weddings, birthday parties, casual gatherings, and more. Our expertise spans from elegant event
-                    decor to premium services like bride and groom makeup, exquisite food catering, and seamless
-                    management of every essential detail. At JK Event Management, we pride ourselves on delivering
-                    perfection at a reasonable price, ensuring your special day is as stress-free and magical as
-                    possible. Let us handle the details while you create memories that last a lifetime!
+                Welcome to JK Event Management, your one-stop solution for crafting unforgettable experiences. We
+                specialize in transforming events into spectacular celebrations, offering comprehensive services for
+                <span class="bold">
+                    weddings, birthday parties, casual gatherings, and more.</span> Our expertise spans from elegant
+                event
+                decor to <span class="bold"> premium services like bride and groom makeup, exquisite food catering, and
+                    seamless
+                    management </span>of every essential detail. At JK Event Management, we pride ourselves on
+                delivering
+                <span class="bold">perfection at a reasonable price, ensuring your special day is as stress-free and
+                    magical as
+                    possible.</span><br><br> Let us handle the details while you create memories that last a
+                lifetime...!
             </div>
         </section>
-    </main>
+        <hr>
+        <section class="gal">
+            <p>Some of our Events</p>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0001.jpg" alt="Image 1">
+                    </div>
+                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0002.jpg" alt="Image 2">
+                    </div>
+                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0003.jpg" alt="Image 3">
+                    </div>
+                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0004.jpg" alt="Image 4">
+                    </div>
+                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0005.jpg" alt="Image 5">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <hr>
 
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper with Coverflow Effect
+        const swiper = new Swiper('.swiper', {
+            effect: 'coverflow', // Coverflow effect
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50, // Rotate angle
+                stretch: 0, // Stretch space between slides
+                depth: 100, // Depth of 3D effect
+                modifier: 1, // Effect multiplier
+                slideShadows: true, // Enable shadow for slides
+            },
+            loop: true, // Infinite loop
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>

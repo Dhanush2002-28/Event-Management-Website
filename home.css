@@ -1,31 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
 
 
-main{
+main {
     margin-top: 100px;
 }
-.main{
+
+.main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.left{
+.left {
     display: flex;
     flex-direction: column;
     font-size: 3rem;
     font-family: 'Raleway';
-    
+
 }
 
-.right{
+.right {
     width: 50%;
     display: flex;
     justify-content: center;
     padding-left: 50px;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: black;
 }
@@ -34,10 +35,17 @@ main hr {
     border: 0;
     background: #f4c503;
     height: 2px;
+    margin: 40px 80px 40px 40px;
+}
+
+.divider {
+    border: 0;
+    background: #f4c503;
+    height: 2px;
     margin: 100px 80px 40px 40px;
 }
 
-.about-sec {
+.about-sec , .gal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,19 +54,55 @@ main hr {
 }
 
 .about {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    font-family: 'Raleway';
     width: 90vw;
     text-align: justify;
     font-weight: 1000px;
     font-size: 1.3rem;
     margin-top: 30px;
+    text-indent: 40px;
 }
 
-.about-sec>p {
-    font-size: 40px;
-    font-weight: 700;
+.about-sec , .gal>p {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: bold;
+    color: #000;
+}
+
+.swiper {
+    width: 80%;
+    max-width: 900px;
+    height: 60vh;
+    /* Height relative to viewport */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures images scale properly */
+}
+
+
+
+.gal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 1000px;
 }
