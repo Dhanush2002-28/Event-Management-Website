@@ -86,7 +86,6 @@
             </div>
         </section>
         <hr>
-
     </main>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -104,6 +103,14 @@
                 slideShadows: true, // Enable shadow for slides
             },
             loop: true, // Infinite loop
+            autoplay: {
+                delay: 2000, // Time between transitions (in ms)
+                disableOnInteraction: false, // Keep autoplay after user interactions
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
