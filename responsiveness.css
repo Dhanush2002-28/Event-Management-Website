@@ -1,0 +1,145 @@
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .left {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .right {
+        width: 80%;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .about {
+        font-size: 1.1rem;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .swiper {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .swiper-slide {
+        font-size: 1.2rem;
+    }
+
+    .marquee img {
+        height: 300px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        width: 90%;
+        padding: 0;
+    }
+
+    main hr,
+    .divider {
+        margin: 20px;
+    }
+
+    .about {
+        font-size: 1rem;
+        text-indent: 10px;
+        line-height: 1.6;
+    }
+
+    .about-sec,
+    .gal,
+    .review>p {
+        font-size: 1.5rem;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .marquee-container {
+        padding: 5px;
+    }
+
+    .marquee img {
+        height: 200px; 
+        margin: 5px;
+    }
+
+    .swiper-slide {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding-left: 20px; 
+    }
+
+    .nav-left {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: block; 
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0; 
+    }
+
+    .middle {
+        width: 15rem; 
+        height: 35px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav {
+        padding-left: 10px; 
+    }
+
+    .nav-left {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .middle {
+        width: 12rem; 
+        height: 30px; 
+    }
+}
