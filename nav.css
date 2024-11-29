@@ -9,8 +9,8 @@ body{
 }
 
 nav {
-    font-family: 'Montserrat', poppins;
-    font-weight: 600;
+    font-family: 'Montserrat', poppins; 
+    font-weight: 600; 
     position: fixed;
     top: 0;
     width: 100%;
