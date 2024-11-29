@@ -11,6 +11,11 @@ body {
     -o-background-size: cover;
 }
 
+.link {
+    text-decoration: none;
+    color: black;
+}
+
 .background {
     width: 100vw; 
     height: 100vh; 

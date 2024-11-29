@@ -9,8 +9,8 @@ body{
 }
 
 nav {
-    font-family: 'Montserrat', poppins;
-    font-weight: 600;
+    font-family: 'Montserrat', poppins; 
+    font-weight: 600; 
     position: fixed;
     top: 0;
     width: 100%;
@@ -43,4 +43,14 @@ nav ul li {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 20rem;
+    border: 2px solid rgb(83, 83, 83);
+    border-radius: 15px;
 }

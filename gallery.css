@@ -1,7 +1,35 @@
-.swiper-slide img {
-    width: 100%; /* Ensures the image fills the slide */
-    height: auto; /* Maintains the aspect ratio */
-    display: block;
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

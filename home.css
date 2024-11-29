@@ -17,6 +17,7 @@ main {
     font-size: 3rem;
     font-family: 'Raleway';
 
+
 }
 
 .right {
@@ -24,6 +25,7 @@ main {
     display: flex;
     justify-content: center;
     padding-left: 50px;
+    
 }
 
 .link {
@@ -163,3 +165,6 @@ main hr {
     flex-direction: row;
 }
 
+.key-left{
+    
+}
