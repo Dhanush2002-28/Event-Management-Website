@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="home.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
@@ -19,14 +20,21 @@
                 <img src="Assets/JK-removebg-preview.png" height="50" width="50">
                 <span id="title">JK Event Management</span>
             </div>
+            <div class="middle">
+                <span id="element"></span>
+            </div>
             <div class="nav-right">
                 <ul>
                     <li>Home</li>
                     <li>About us</li>
                     <li>
-                        <a class="link" href="gallery.html">Gallery</a></li>
+                        <a class="link" href="gallery.html">Gallery</a>
+                    </li>
                     <li>
                         <a class="link" href="book.html">Book an Event</a>
+                    </li>
+                    <li>
+                        Contact Us
                     </li>
                 </ul>
             </div>
@@ -47,6 +55,7 @@
             <div class="right">
                 <img src="Assets/JK-removebg-preview.png">
             </div>
+            
         </section>
         <hr class="divider">
         <section class="about-sec">
@@ -72,15 +81,15 @@
             <p>Some of our Events</p>
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0001.jpg" alt="Image 1">
+                    <div class="swiper-slide"><img src="Assets/1.jpg" alt="Image 1">
                     </div>
-                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0002.jpg" alt="Image 2">
+                    <div class="swiper-slide"><img src="Assets/2.jpg" alt="Image 2">
                     </div>
-                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0003.jpg" alt="Image 3">
+                    <div class="swiper-slide"><img src="Assets/3.jpg" alt="Image 3">
                     </div>
-                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0004.jpg" alt="Image 4">
+                    <div class="swiper-slide"><img src="Assets/4.jpg" alt="Image 4">
                     </div>
-                    <div class="swiper-slide"><img src="Assets/IMG-20241117-WA0005.jpg" alt="Image 5">
+                    <div class="swiper-slide"><img src="Assets/5.jpg" alt="Image 5">
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -113,6 +122,42 @@
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>JK Event Management</h3>
+                <p>Your trusted partner for creating memorable events. We specialize in weddings, parties, and more, offering exceptional services at reasonable prices.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@jkeventmanagement.com">info@jkeventmanagement.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p>Address: 123 Event St., Celebration City</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 JK Event Management. All rights reserved.</p>
+        </div>
+    </footer>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
 
@@ -141,6 +186,14 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+        });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Wedding ceremonies.', 'Engagements.', 'Birthday Parties.', 'Formal Events.', 'Customised Events.', 'And many more......'],
+            typeSpeed: 50,
+            loop: true,
         });
     </script>
 </body>
