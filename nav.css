@@ -57,7 +57,7 @@ nav ul li {
 }
 
 .menu-button {
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 2rem;
     background: none;
     border: none;
@@ -67,11 +67,11 @@ nav ul li {
 
 @media (max-width: 768px) {
     .menu-button {
-        display: block; /* Show the menu button on smaller screens */
+        display: block; 
     }
 
     nav ul {
-        display: none; /* Hide the nav links by default */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 70px;
@@ -83,7 +83,7 @@ nav ul li {
     }
 
     nav ul.active {
-        display: flex; /* Show the nav links when 'active' class is added */
+        display: flex; 
     }
 
     nav ul li {

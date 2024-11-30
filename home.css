@@ -84,7 +84,6 @@ main hr {
     width: 80%;
     max-width: 900px;
     height: 60vh;
-    /* Height relative to viewport */
 }
 
 .swiper-slide {
@@ -100,7 +99,6 @@ main hr {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensures images scale properly */
 }
 
 
@@ -231,7 +229,7 @@ main hr {
     animation: color_anim 1s infinite 0.4s;
 }
 
-/* SVG animations */
+
 @keyframes color_anim {
     0% {
         fill: white;
