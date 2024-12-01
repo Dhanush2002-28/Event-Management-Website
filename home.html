@@ -177,10 +177,10 @@
             <p>&copy; 2024 JK Event Management. All rights reserved. Made by Dhanush (Contact : 9901662554)</p>
         </div>
     </footer>
-
+<!-- Javascript -->
+    <!-- SwiperJS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-
         const swiper = new Swiper('.swiper', {
             effect: 'coverflow',
             grabCursor: true,
@@ -208,6 +208,7 @@
             },
         });
     </script>
+    <!-- TypedJS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
@@ -216,11 +217,11 @@
             loop: true,
         });
     </script>
+    <!-- Menu Button -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuButton = document.getElementById('menuToggle');
             const navMenu = document.getElementById('navMenu');
-
             menuButton.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
             });
