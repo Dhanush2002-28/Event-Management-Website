@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="nav.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Booking</title>
-    <script src="firebase-config.js" type="module"></script>
-<script src="main.js" type="module"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="main.js"></script>
+
 
 </head>
 
@@ -37,7 +39,7 @@
 
     <div class="background">
         <div class="booking-form-w3layouts">
-            <form action="#" method="post" id="eventForm">
+            <form id="eventForm">
                 <h3 class="sub-heading-agileits">Booking Details</h3>
                 <div class="main-flex-w3ls-sectns">
                     <div class="field-agileinfo-spc form-w3-agile-text1">
@@ -74,6 +76,38 @@
     <script src="main.js"></script>
         </div>
     </div>
+    <script type="module">
+        emailjs.init("5eT0ObIOCTMyvpRvq");
+        document.getElementById('eventForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get form values
+    const templateParams = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phno').value,
+        email: document.getElementById('email').value,
+        location: document.getElementById('location').value,
+        event_type: document.getElementById('event-type').value,
+    };
+
+    // Send email
+    emailjs.send('service_4ahkiql', 'template_ij80o7s', {
+    name: document.getElementById('name').value,
+    phone: document.getElementById('phno').value,
+    email: document.getElementById('email').value,
+    location: document.getElementById('location').value,
+    eventType: document.getElementById('event-type').value,
+}).then(response => {
+    console.log('Success:', response);
+    alert('Email sent successfully!');
+}).catch(error => {
+    console.error('Error:', error);
+    alert('Failed to send email');
+});
+
+});
+
+    </script>
 </body>
 
 </html>
