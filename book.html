@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Booking</title>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="module" src="firebase-config.js"></script>
-<script type="module" src="main.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="main.js"></script>
 
 
 </head>
@@ -28,7 +28,8 @@
                     </li>
                     <li>About us</li>
                     <li>
-                        <a class="link" href="gallery.html">Gallery</a></li>
+                        <a class="link" href="gallery.html">Gallery</a>
+                    </li>
                     <li>
                         <a class="link" href="book.html">Book an Event</a>
                     </li>
@@ -46,7 +47,8 @@
                         <input id="name" type="text" name="Name" placeholder="Full Name" required="">
                     </div>
                     <div class="field-agileinfo-spc form-w3-agile-text2">
-                        <input id="phno" type="text" name="Phone no" placeholder="Phone Number" required="" maxlength="10">
+                        <input id="phno" type="text" name="Phone no" placeholder="Phone Number" required=""
+                            maxlength="10">
                     </div>
                 </div>
                 <div class="field-agileinfo-spc form-w3-agile-text">
@@ -72,42 +74,44 @@
                 <input type="reset" value="Clear Form">
                 <div class="clear"></div>
             </form>
-            <script src="firebase-config.js"></script>
-    <script src="main.js"></script>
+
         </div>
     </div>
     <script type="module">
+        import emailjs from 'emialjs-com';
         emailjs.init("5eT0ObIOCTMyvpRvq");
-        document.getElementById('eventForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+        document.getElementById('eventForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-    // Get form values
-    const templateParams = {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phno').value,
-        email: document.getElementById('email').value,
-        location: document.getElementById('location').value,
-        event_type: document.getElementById('event-type').value,
-    };
+            // Get form values
+            const templateParams = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phno').value,
+                email: document.getElementById('email').value,
+                location: document.getElementById('location').value,
+                event_type: document.getElementById('event-type').value,
+            };
 
-    // Send email
-    emailjs.send('service_4ahkiql', 'template_ij80o7s', {
-    name: document.getElementById('name').value,
-    phone: document.getElementById('phno').value,
-    email: document.getElementById('email').value,
-    location: document.getElementById('location').value,
-    eventType: document.getElementById('event-type').value,
-}).then(response => {
-    console.log('Success:', response);
-    alert('Email sent successfully!');
-}).catch(error => {
-    console.error('Error:', error);
-    alert('Failed to send email');
-});
+            // Send email
+            emailjs.send('service_4ahkiql', 'template_ij80o7s', {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phno').value,
+                email: document.getElementById('email').value,
+                location: document.getElementById('location').value,
+                eventType: document.getElementById('event-type').value,
+            }).then(response => {
+                console.log('Success:', response);
+                alert('Email sent successfully!');
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('Failed to send email');
+            });
 
-});
+        });
 
     </script>
+    <script src="firebase-config.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

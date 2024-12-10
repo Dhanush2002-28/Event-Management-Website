@@ -1,22 +1,36 @@
-import { db } from "./firebase-config.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+// main.js
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { firebaseConfig } from './firebase-config'; // Make sure the path matches your project
 
-document.getElementById("eventForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-    const formData = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phno").value,
-        email: document.getElementById("email").value,
-        location: document.getElementById("location").value,
-        eventType: document.getElementById("event-type").value
-    };
+async function submitForm(event) {
+  event.preventDefault(); // Prevent default form submission
 
-    try {
-        // Add form data to Firestore
-        await addDoc(collection(db, "eventBookings"), formData);
-        alert("Booking details submitted successfully!");
-    } catch (error) {
-        console.error("Error adding document: ", error);
-    }
-});
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phno').value;
+  const email = document.getElementById('email').value;
+  const location = document.getElementById('location').value;
+  const eventType = document.getElementById('event-type').value;
+
+  try {
+    const docRef = await addDoc(collection(db, 'formEntries'), {
+      name,
+      phone,
+      email,
+      location,
+      eventType,
+      timestamp: new Date()
+    });
+    console.log('Document written with ID: ', docRef.id);
+    alert('Form submitted successfully!');
+  } catch (e) {
+    console.error('Error adding document: ', e);
+    alert('Error submitting form');
+  }
+}
+
+document.getElementById('submit-button').addEventListener('click', submitForm);
