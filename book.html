@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="nav.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Booking</title>
+    <script src="firebase-config.js" type="module"></script>
+<script src="main.js" type="module"></script>
+
 </head>
 
 <body>
@@ -34,22 +37,25 @@
 
     <div class="background">
         <div class="booking-form-w3layouts">
-            <form action="#" method="post">
+            <form action="#" method="post" id="eventForm">
                 <h3 class="sub-heading-agileits">Booking Details</h3>
                 <div class="main-flex-w3ls-sectns">
                     <div class="field-agileinfo-spc form-w3-agile-text1">
-                        <input type="text" name="Name" placeholder="Full Name" required="">
+                        <input id="name" type="text" name="Name" placeholder="Full Name" required="">
                     </div>
                     <div class="field-agileinfo-spc form-w3-agile-text2">
-                        <input type="text" name="Phone no" placeholder="Phone Number" required="" maxlength="10">
+                        <input id="phno" type="text" name="Phone no" placeholder="Phone Number" required="" maxlength="10">
                     </div>
                 </div>
                 <div class="field-agileinfo-spc form-w3-agile-text">
-                    <input type="email" name="Email" placeholder="Email" required="">
+                    <input id="email" type="email" name="Email" placeholder="Email" required="">
+                </div>
+                <div class="field-agileinfo-spc form-w3-agile-text">
+                    <input id="location" type="location" name="Event Location" placeholder="Location" required="">
                 </div>
                 <div class="main-flex-w3ls-sectns">
                     <div class="field-agileinfo-spc form-w3-agile-text1">
-                        <select class="form-control">
+                        <select id="event-type" class="form-control">
                             <option>Event type</option>
                             <option value="">Wedding</option>
                             <option value="">Engagement</option>
@@ -64,6 +70,8 @@
                 <input type="reset" value="Clear Form">
                 <div class="clear"></div>
             </form>
+            <script src="firebase-config.js"></script>
+    <script src="main.js"></script>
         </div>
     </div>
 </body>
