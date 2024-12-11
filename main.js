@@ -1,7 +1,7 @@
 // main.js
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { firebaseConfig } from './firebase-config'; // Make sure the path matches your project
+import { firebaseConfig } from './firebase-config.js'; // Make sure the path matches your project
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
