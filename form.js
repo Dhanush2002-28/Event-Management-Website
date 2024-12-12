@@ -1,10 +1,11 @@
 // Import required Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+import emailjs from 'emailjs-com'; // Correctly import emailjs-com
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyD_cgvQzdk_YxgN7gEEr9Hn4Csk3JOT_wU",
+    apiKey: "YOUR_API_KEY",
     authDomain: "jkeventmanagement-a0ec7.firebaseapp.com",
     databaseURL: "https://jkeventmanagement-a0ec7-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "jkeventmanagement-a0ec7",
@@ -37,7 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
+            // Submit data to Firestore
             await addDoc(collection(db, 'bookings'), formData);
+
+            // Send email using EmailJS
+            const result = await emailjs.send('service_4ahkiql', 'template_ij80o7s', formData, '5eT0ObIOCTMyvpRvq');
+            console.log(result.text);
             alert('Booking submitted successfully!');
         } catch (error) {
             console.error('Error submitting booking:', error);
