@@ -77,41 +77,6 @@
 
         </div>
     </div>
-    <script type="module">
-        import emailjs from 'emialjs-com';
-        emailjs.init("5eT0ObIOCTMyvpRvq");
-        document.getElementById('eventForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Get form values
-            const templateParams = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phno').value,
-                email: document.getElementById('email').value,
-                location: document.getElementById('location').value,
-                event_type: document.getElementById('event-type').value,
-            };
-
-            // Send email
-            emailjs.send('service_4ahkiql', 'template_ij80o7s', {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phno').value,
-                email: document.getElementById('email').value,
-                location: document.getElementById('location').value,
-                eventType: document.getElementById('event-type').value,
-            }).then(response => {
-                console.log('Success:', response);
-                alert('Email sent successfully!');
-            }).catch(error => {
-                console.error('Error:', error);
-                alert('Failed to send email');
-            });
-
-        });
-
-    </script>
-    <script src="firebase-config.js"></script>
-    <script src="main.js"></script>
 </body>
 
 </html>
