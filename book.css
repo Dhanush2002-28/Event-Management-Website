@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
@@ -17,14 +18,14 @@ body {
 }
 
 .background {
-    width: 100vw; 
-    height: 100vh; 
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url('Assets/JK-removebg-preview.png'); 
-    background-repeat: no-repeat; 
-    background-position: center top; 
-    background-size: contain; 
+    background-image: url('Assets/JK-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
 }
 
 
@@ -63,7 +64,7 @@ ul {
 }
 
 h2.sub-heading-agileits,
-h3.sub-heading-agileits{
+h3.sub-heading-agileits {
     display: inline-block;
     text-align: left;
     font-size: 24px;
@@ -179,6 +180,38 @@ select.form-control option {
 ul.radio-buttons-w3-agileits li {
     display: inline-block;
     margin: 0em 2em;
+}
+
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #0000;
+    border-right-color: #ffa50097;
+    position: relative;
+    animation: l24 1s infinite linear;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: inherit;
+    animation: inherit;
+    animation-duration: 2s;
+}
+
+.loader:after {
+    animation-duration: 4s;
+}
+
+@keyframes l24 {
+    100% {
+        transform: rotate(1turn)
+    }
 }
 
 @media (max-width:1440px) {

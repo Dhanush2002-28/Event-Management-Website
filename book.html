@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="nav.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Booking</title>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="module" src="firebase-config.js"></script>
-    <script type="module" src="main.js"></script>
-
-
 </head>
 
 <body>
@@ -60,12 +55,12 @@
                 <div class="main-flex-w3ls-sectns">
                     <div class="field-agileinfo-spc form-w3-agile-text1">
                         <select id="event-type" class="form-control">
-                            <option>Event type</option>
-                            <option value="">Wedding</option>
-                            <option value="">Engagement</option>
-                            <option value="">Birthday</option>
-                            <option value="">Casual Events</option>
-                            <option value="">Formal Events</option>
+                            <option value="" disabled selected>Select Event Type</option>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Engagement">Engagement</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Casual Events">Casual Events</option>
+                            <option value="Formal Events">Formal Events</option>
                         </select>
                     </div><br><br>
                 </div>
@@ -73,10 +68,13 @@
                 <input type="submit" value="Submit">
                 <input type="reset" value="Clear Form">
                 <div class="clear"></div>
+                <div style="display: none;" id="loading" class="loader"></div>
             </form>
 
         </div>
     </div>
+    <script type="module" src="form.js"></script>
+
 </body>
 
 </html>

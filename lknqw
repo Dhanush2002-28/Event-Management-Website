@@ -1,0 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('eventForm');
+    const loading = document.getElementById('loading');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Show loading indicator
+        loading.style.display = 'block';
+
+        const formData = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phno').value,
+            email: document.getElementById('email').value,
+            location: document.getElementById('location').value,
+            eventType: document.getElementById('event-type').value,
+        };
+
+        try {
+            await db.collection('bookings').add(formData);
+
+            // Hide loading indicator and show success message
+            loading.style.display = 'none';
+            alert('Booking submitted successfully!');
+        } catch (error) {
+            // Hide loading indicator and show error message
+            loading.style.display = 'none';
+            console.error('Error submitting booking:', error);
+            alert('Error submitting booking.');
+        }
+    });
+});
