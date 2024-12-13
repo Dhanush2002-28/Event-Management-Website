@@ -10,6 +10,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    overflow: hidden;;
 }
 
 .link {
@@ -98,6 +99,21 @@ input#datepicker {
     font-family: 'Roboto', sans-serif;
 }
 
+.booking-form-w3layouts input[type="date"]{
+    width: auto;
+    font-weight: 300;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    padding: 10px 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 .booking-form-w3layouts textarea {
     resize: none;
     height: 80px;
@@ -116,7 +132,8 @@ select.form-control option {
 }
 
 .booking-form-w3layouts input[type="submit"],
-.booking-form-w3layouts input[type="reset"] {
+.booking-form-w3layouts input[type="reset"],
+.booking-form-w3layouts input[type="back"] {
     text-transform: capitalize;
     background: #0091cd;
     color: #fff;
@@ -135,12 +152,42 @@ select.form-control option {
     font-family: 'Raleway', sans-serif;
 }
 
+.home{
+    text-transform: capitalize;
+    background: #0091cd;
+    color: #fff;
+    padding: 0.5em 4em;
+    border: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-left: 20px;
+    margin-top: 1em;
+    float: left;
+    outline: none;
+    letter-spacing: 1px;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
 .booking-form-w3layouts input[type="submit"] {
     margin-right: 1.5em;
     background: #d2741c;
 }
 
+.booking-form-w3layouts input[type="back"] {
+    margin-right: 1.5em;
+    background: #d2741c;
+}
+
 .booking-form-w3layouts input[type="submit"]:hover {
+    background: #0091cd;
+    color: #fff;
+}
+
+.booking-form-w3layouts input[type="back"]:hover {
     background: #0091cd;
     color: #fff;
 }
@@ -172,6 +219,7 @@ select.form-control option {
     letter-spacing: 2px;
     font-weight: 400;
     position: relative;
+    margin-left: 10px;
     margin-bottom: 5px;
     display: inline-block;
     text-transform: capitalize;
@@ -252,9 +300,29 @@ ul.radio-buttons-w3-agileits li {
     }
 
     .booking-form-w3layouts input[type="submit"],
-    .booking-form-w3layouts input[type="reset"] {
+    .booking-form-w3layouts input[type="reset"],
+    .booking-form-w3layouts input[type="back"] {
         padding: 0.5em 3em;
         font-size: 1.1em;
+    }
+
+    .home{
+        text-transform: capitalize;
+        background: #0091cd;
+        color: #fff;
+        padding: 0.5em 4em;
+        border: none;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-top: 1em;
+        float: left;
+        outline: none;
+        letter-spacing: 1px;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        transition: .5s all;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
     }
 }
 
@@ -273,6 +341,24 @@ ul.radio-buttons-w3-agileits li {
 
     ul.radio-buttons-w3-agileits li {
         margin: 0em 1em;
+    }
+    .home{
+        text-transform: capitalize;
+        background: #0091cd;
+        color: #fff;
+        padding: 0.5em 4em;
+        border: none;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-top: 1em;
+        float: left;
+        outline: none;
+        letter-spacing: 1px;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        transition: .5s all;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
     }
 }
 
@@ -305,6 +391,25 @@ ul.radio-buttons-w3-agileits li {
     h3.sub-heading-agileits {
         margin-bottom: .6em;
     }
+
+    .home{
+        text-transform: capitalize;
+        background: #0091cd;
+        color: #fff;
+        padding: 0.5em 4em;
+        border: none;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-top: 1em;
+        float: left;
+        outline: none;
+        letter-spacing: 1px;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        transition: .5s all;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
+    }
 }
 
 @media (max-width:640px) {
@@ -319,8 +424,28 @@ ul.radio-buttons-w3-agileits li {
     }
 
     .booking-form-w3layouts input[type="submit"],
-    .booking-form-w3layouts input[type="reset"] {
+    .booking-form-w3layouts input[type="reset"],
+    .booking-form-w3layouts input[type="back"] {
         padding: 0.5em 2em;
+    }
+
+    .home{
+        text-transform: capitalize;
+        background: #0091cd;
+        color: #fff;
+        padding: 0.5em 4em;
+        border: none;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-top: 1em;
+        float: left;
+        outline: none;
+        letter-spacing: 1px;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        transition: .5s all;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
     }
 }
 
@@ -374,7 +499,8 @@ ul.radio-buttons-w3-agileits li {
     }
 
     .booking-form-w3layouts input[type="submit"],
-    .booking-form-w3layouts input[type="reset"] {
+    .booking-form-w3layouts input[type="reset"],
+    .booking-form-w3layouts input[type="back"] {
         font-size: 1em;
     }
 
@@ -385,7 +511,28 @@ ul.radio-buttons-w3-agileits li {
     .radio-section {
         margin: 1em 0 .7em;
     }
+    .home{
+        text-transform: capitalize;
+        background: #0091cd;
+        color: #fff;
+        padding: 0.5em 4em;
+        border: none;
+        font-weight: 500;
+        font-size: 1.2em;
+        margin-top: 1em;
+        float: left;
+        outline: none;
+        letter-spacing: 1px;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        transition: .5s all;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
+    }
+    
 }
+
+
 
 @media (max-width:414px) {
     .booking-form-w3layouts {
@@ -401,7 +548,8 @@ ul.radio-buttons-w3-agileits li {
 @media (max-width:384px) {
 
     .booking-form-w3layouts input[type="submit"],
-    .booking-form-w3layouts input[type="reset"] {
+    .booking-form-w3layouts input[type="reset"],
+    .booking-form-w3layouts input[type="back"]{ 
         float: none;
     }
 
