@@ -80,7 +80,8 @@ nav ul li {
     z-index: 1000;
     top: 0;
     right: 0;
-    background-color: #f8f8f8;
+    background: rgb(221,224,70);
+    background: linear-gradient(324deg, rgba(221,224,70,1) 31%, rgba(247,243,233,1) 63%);
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
@@ -124,6 +125,8 @@ nav ul li {
 @media (max-width: 768px) {
     .menu-button {
         display: block; 
+        margin-right: 30px;
+        margin-left: 20px;
     }
 
     nav ul {
