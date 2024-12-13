@@ -98,7 +98,7 @@
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: row;
         padding-left: 20px; 
     }
 

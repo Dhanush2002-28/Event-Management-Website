@@ -36,6 +36,17 @@
                 </ul>
             </div>
         </nav>
+    
+        <div id="sidebar" class="sidebar">
+            <span class="close-btn" id="closeSidebar">&times;</span>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>About us</li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book.html">Book an Event</a></li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -133,10 +144,8 @@
         <section class="keynote">
             <div class="container">
                 <div class="key-left">
-
                 </div>
                 <div class="key-right">
-
                 </div>
             </div>
         </section>
@@ -159,7 +168,7 @@
             </div>
             <div class="footer-contact">
                 <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@jkeventmanagement.com">info@jkeventmanagement.com</a></p>
+                <p>Email: <a href="mailto:jkeventmanagement065@gmail.com">jkeventmanagement065@gmail.com</a></p>
                 <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
                 <p>Address: Bengaluru, Karnataka</p>
             </div>
@@ -178,6 +187,28 @@
         </div>
     </footer>
 <!-- Javascript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menuToggle');
+        const closeSidebar = document.getElementById('closeSidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.style.width = '250px';
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            sidebar.style.width = '0';
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && event.target !== menuToggle) {
+                sidebar.style.width = '0';
+            }
+        });
+    });
+</script>
     <!-- SwiperJS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
