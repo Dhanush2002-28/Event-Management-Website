@@ -54,6 +54,7 @@ nav ul li {
     width: 20rem;
     border: 2px solid rgb(83, 83, 83);
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .menu-button {
