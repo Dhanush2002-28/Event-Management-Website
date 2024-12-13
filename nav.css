@@ -128,7 +128,7 @@ nav ul li {
 
     nav ul {
         display: none;
-        flex-direction: column
+        flex-direction: column;
         position: absolute;
         top: 70px;
         left: 0;
