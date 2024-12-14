@@ -33,6 +33,13 @@ nav {
     color: black;
 }
 
+.link.active {
+    /* color: rgb(0, 0, 0);
+    background-color: #f4c053; /* Highlight color */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 nav ul {
     display: flex;
     justify-content: center;

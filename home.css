@@ -11,6 +11,10 @@ main {
     align-items: center;
 }
 
+.intro{
+    flex-direction: row-reverse; !important
+}
+
 .left {
     display: flex;
     flex-direction: column;
@@ -31,6 +35,13 @@ main {
 .link {
     text-decoration: none;
     color: black;
+}
+
+.cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
 main hr {
