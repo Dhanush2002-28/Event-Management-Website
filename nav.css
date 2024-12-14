@@ -28,6 +28,11 @@ nav {
     overflow-x: auto;
 }
 
+.link {
+    text-decoration: none;
+    color: black;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
