@@ -11,9 +11,6 @@ main {
     align-items: center;
 }
 
-.intro{
-    flex-direction: row-reverse; !important
-}
 
 .left {
     display: flex;

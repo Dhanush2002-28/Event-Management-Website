@@ -34,8 +34,6 @@ nav {
 }
 
 .link.active {
-    /* color: rgb(0, 0, 0);
-    background-color: #f4c053; /* Highlight color */
     font-weight: bold;
     text-decoration: underline;
 }
