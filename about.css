@@ -23,7 +23,6 @@
     align-items: center;
     width: 90vw;
     height:auto;
-    color: aqua;
     gap: 2vw;
   }
 
@@ -47,7 +46,7 @@ box-shadow: 0px 0px 85px 2px rgba(255,255,255,0.69);
 box-shadow: 0px 0px 85px 2px rgba(221,224,71,0.69);
   }
 
-  .inside>img{
+  .inside>.card>.img{
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
@@ -58,10 +57,11 @@ box-shadow: 0px 0px 85px 2px rgba(221,224,71,0.69);
   position: relative;
   width: 20vw;
   height: 30vh;
-  background-image: url(Assets/1.jpg);
+  /* background-image: url(Assets/1.jpg); */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   font-size: 25px;
   font-weight: bold;
   border-radius: 15px;
@@ -103,7 +103,18 @@ box-shadow: 0px 0px 85px 2px rgba(221,224,71,0.69);
   transition: all 0.5s;
 }
 
-.card:hover:after {
-  content: "HELLO";
+.card1:hover:after {
+  content: "Engagement";
 }
-
+.card2:hover:after {
+  content: "Marriage";
+}
+.card3:hover:after {
+  content: "Birthday";
+}
+.card4:hover:after {
+  content: "Engagement";
+}
+.card1:hover:after {
+  content: "Engagement";
+}
