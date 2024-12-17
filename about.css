@@ -120,14 +120,14 @@ box-shadow: 0px 0px 85px 2px rgba(221,224,71,0.69);
   content: "Housewarming Ceremony";
 }
 .card5:hover:after {
-  content: "Engagement";
+  content: "Casual Events";
 }
 .card6:hover:after {
-  content: "Engagement";
+  content: "Formal Events";
 }
 .card7:hover:after {
-  content: "Engagement";
+  content: "Flower Decorations";
 }
 .card8:hover:after {
-  content: "Engagement";
+  content: "Balloon Decorations";
 }
