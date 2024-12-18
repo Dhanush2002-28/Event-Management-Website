@@ -140,23 +140,81 @@
             <p>Customer Experiences</p>
             <div class="marquee-container">
                 <span class="marquee">
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
-                    <img height="400px" src="Assets/Gold and Navy Modern Elegant Realtor Review Instagram Post.png" />
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "JK Event Management is a beacon of excellence, transforming every event into a masterpiece
+                            of creativity and organization."<br><br>
+                            -Dhanush C
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "From concept to execution, JK Event Management delivers unparalleled experiences that leave
+                            lasting impressions."<br><br>
+                            -Varun S
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "JK Event Management is a beacon of excellence, transforming every event into a masterpiece
+                            of creativity and organization."<br><br>
+                            -Dhanush C
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "Effortless planning and extraordinary results – that's the JK Event Management
+                            promise!"<br><br>
+                            -Riya P
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "A trusted partner for flawless events, JK Event Management combines precision and passion
+                            to create magic."<br><br>
+                            -Aarav M
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "JK Event Management excels in crafting unforgettable memories with professionalism and
+                            creativity."<br><br>
+                            -Sneha R
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "Turning visions into reality, JK Event Management sets the gold standard in event
+                            planning."<br><br>
+                            -Akash K
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "When excellence is the expectation, JK Event Management is the answer!"<br><br>
+                            -Ananya S
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-img"></div>
+                        <div class="review-para">
+                            "Delivering perfection with a personal touch, JK Event Management redefines client
+                            satisfaction."<br><br>
+                            -Rohan D
+                        </div>
+                    </div>
                 </span>
             </div>
         </section>
         <hr />
-        <section class="keynote">
-            <div class="container">
-                <div class="key-left"></div>
-                <div class="key-right"></div>
-            </div>
-        </section>
     </main>
     <footer>
         <div class="footer-container">
@@ -198,7 +256,8 @@
         </div>
         <div class="footer-bottom">
             <p>
-                &copy; 2024 JK Event Management. All rights reserved.<br> Made by Dhanush (<a href="https://dhanushc-portfolio.vercel.app/">Contact</a>)</p>
+                &copy; 2024 JK Event Management. All rights reserved.<br> Made by Dhanush (<a
+                    href="https://dhanushc-portfolio.vercel.app/">Contact</a>)</p>
 
             </p>
         </div>
@@ -248,7 +307,15 @@
             });
         });
     </script>
-    
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const marquee = document.querySelector('.marquee');
+            const marqueeWidth = marquee.offsetWidth;
+            const containerWidth = marquee.parentElement.offsetWidth;
+
+            marquee.style.animationDuration = `${containerWidth / 40}s`;
+        });
+    </script>
 </body>
 
 </html>
