@@ -131,3 +131,71 @@ box-shadow: 0px 0px 85px 2px rgba(221,224,71,0.69);
 .card8:hover:after {
   content: "Balloon Decorations";
 }
+
+/* Responsiveness */
+@media screen and (max-width: 1200px) {
+  .outside1 {
+      gap: 1.5vw;
+  }
+  
+  .card {
+      width: 22vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+      width: 25vw;
+      height: 25vh;
+  }
+  
+  .outside1 {
+      width: 95vw;
+      gap: 1vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+      width: 100%;
+  }
+
+  .outside1 {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2vh;
+  }
+
+  .card {
+      width: 40vw;
+      height: 20vh;
+  }
+
+  .inside {
+      width: auto;
+      height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+      width: 80vw;
+      height: 25vh;
+  }
+
+  .outside1 {
+      gap: 3vh;
+  }
+
+  p[style*="font-size: 1.2rem"] {
+      font-size: 1rem !important;
+  }
+}
+
+/* Fix for very small screens */
+@media screen and (max-width: 320px) {
+  .card {
+      width: 90vw;
+      height: 20vh;
+  }
+}
