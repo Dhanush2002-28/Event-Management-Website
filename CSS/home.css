@@ -385,3 +385,90 @@ main hr {
         margin-left: 0;
     }
 }
+
+/* Mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .marquee-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .marquee {
+        flex-direction: column;
+        animation: none; /* Disable animation for small screens for better readability */
+    }
+
+    .review-card {
+        width: 90vw;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .review-img {
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .review-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .review-para {
+        width: auto;
+        padding: 10px;
+    }
+}
+
+/* Tablet devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .marquee-container {
+        gap: 50px;
+        padding: 15px;
+    }
+
+    .marquee {
+        gap: 10px;
+    }
+
+    .review-card {
+        width: 70vw;
+        gap: 10px;
+    }
+
+    .review-img {
+        width: 40%;
+        height: auto;
+    }
+
+    .review-para {
+        width: auto;
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape tablets and small desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .marquee-container {
+        gap: 75px;
+    }
+
+    .review-card {
+        width: 60vw;
+        gap: 15px;
+    }
+
+    .review-img {
+        width: 30%;
+        height: auto;
+    }
+
+    .review-para {
+        width: auto;
+        font-size: 1rem;
+    }
+}
