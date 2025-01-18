@@ -368,3 +368,20 @@ main hr {
     display: flex;
     flex-direction: row;
 }
+
+@media (max-width: 768px) {
+    .review-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-img img {
+        height: auto;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .review-para {
+        margin-left: 0;
+    }
+}
