@@ -396,7 +396,7 @@ main hr {
 
     .marquee {
         flex-direction: column;
-        animation: none; /* Disable animation for small screens for better readability */
+        animation: none; /* Disable animation for better readability */
     }
 
     .review-card {
@@ -408,7 +408,7 @@ main hr {
     }
 
     .review-img {
-        width: 50%;
+        width: 80%; /* Increased width */
         height: auto;
         margin: 0 auto;
     }
@@ -441,7 +441,7 @@ main hr {
     }
 
     .review-img {
-        width: 40%;
+        width: 60%; /* Increased width */
         height: auto;
     }
 
@@ -463,7 +463,7 @@ main hr {
     }
 
     .review-img {
-        width: 30%;
+        width: 50%; /* Increased width */
         height: auto;
     }
 
