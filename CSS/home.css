@@ -472,3 +472,44 @@ main hr {
         font-size: 1rem;
     }
 }
+
+
+@media (min-width: 768px) {
+    .swiper {
+        width: 80%;
+        max-width: 900px;
+        height: auto; /* Let the height adjust to the images */
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* No cropping, image fully visible */
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper {
+        width: 100%;
+        height: auto; /* Automatically adjusts for mobile */
+    }
+
+    .swiper-slide {
+        background: #f3f3f3; /* Neutral background for mobile */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; /* Ensures the image fills the slide */
+    }
+}
