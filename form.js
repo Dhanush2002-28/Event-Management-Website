@@ -4,6 +4,8 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 let firebaseConfig = {}; // Placeholder for Firebase config
 let emailjsConfig = {};  // Placeholder for EmailJS config
 
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 // Fetch configuration from the serverless function
 (async function fetchConfig() {
     try {
