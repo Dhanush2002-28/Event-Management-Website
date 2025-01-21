@@ -4,26 +4,21 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 let firebaseConfig = {};
 let emailjsConfig = {};
 
-// Fetch both configurations
 async function fetchConfigs() {
     try {
         console.log("Fetching configurations...");
         
-        // Fetch Firebase config
         const firebaseResponse = await fetch('/api/firebaseconfig');
         if (!firebaseResponse.ok) {
             throw new Error(`Failed to fetch Firebase config: ${firebaseResponse.status}`);
         }
         firebaseConfig = await firebaseResponse.json();
         
-        // Fetch EmailJS config
         const emailjsResponse = await fetch('/api/emailjs-config');
         if (!emailjsResponse.ok) {
             throw new Error(`Failed to fetch EmailJS config: ${emailjsResponse.status}`);
         }
         emailjsConfig = await emailjsResponse.json();
-        
-        // Initialize services
         initializeServices();
     } catch (error) {
         console.error("Error fetching configurations:", error);
@@ -33,12 +28,10 @@ async function fetchConfigs() {
 
 function initializeServices() {
     try {
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         window.db = getFirestore(app);
         console.log("Firebase initialized successfully");
         
-        // Initialize EmailJS
         const emailjsScript = document.createElement('script');
         emailjsScript.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
         emailjsScript.onload = () => {
@@ -52,7 +45,6 @@ function initializeServices() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch configurations when the document loads
     fetchConfigs();
     
     const form = document.getElementById('eventForm');
@@ -73,13 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            // Add to Firestore
             await addDoc(collection(window.db, 'bookings'), formData);
             console.log("Data added to Firestore successfully");
 
-            // Send emails
             await Promise.all([
-                // Team notification
                 emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdTeam, {
                     from_name: formData.name,
                     from_email: formData.email,
@@ -89,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     event_type: formData.eventType,
                     reply_to: formData.email,
                 }),
-                // User confirmation
                 emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateIdUser, {
                     user_name: formData.name,
                     user_email: formData.email,
