@@ -247,7 +247,6 @@ main hr {
 .btn-conteiner {
     display: flex;
     justify-content: flex-start;
-    justify-content: center;
     --color-text: #ffffff;
     --color-background: #f4c503;
     --color-outline: #ff145b80;
