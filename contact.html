@@ -16,7 +16,7 @@
 
 <body>
     <nav>
-        <div class="nav-left">
+        <div class="nav-left" onclick="window.location.href='index.html'">
             <img src="Assets/JK-removebg-preview.png" height="50" width="50">
             <span id="title">JK Event Management</span>
         </div>
@@ -81,14 +81,17 @@
                             </path>
                         </svg>
                     </button>
-                    <a href="mailto:jkeventmanagement065@gmail.com?subject=Inquiry about Event Management Services&body=Hello,\n\nI would like to inquire about your event management services.\n\nThank you.">
-                    <button class="card4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24"
-                            class="gmail" width="24">
-                            <path d="M6 12C6 15.3137 8.68629 18 12 18C14.6124 18 16.8349 16.3304 17.6586 14H12V10H21.8047V14H21.8C20.8734 18.5645 16.8379 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.445 2 18.4831 3.742 20.2815 6.39318L17.0039 8.68815C15.9296 7.06812 14.0895 6 12 6C8.68629 6 6 8.68629 6 12Z"></path>
-                        </svg>
-                    </button>
-                </a>
+                    <a
+                        href="mailto:jkeventmanagement065@gmail.com?subject=Inquiry about Event Management Services&body=Hello,\n\nI would like to inquire about your event management services.\n\nThank you.">
+                        <button class="card4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24"
+                                class="gmail" width="24">
+                                <path
+                                    d="M6 12C6 15.3137 8.68629 18 12 18C14.6124 18 16.8349 16.3304 17.6586 14H12V10H21.8047V14H21.8C20.8734 18.5645 16.8379 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.445 2 18.4831 3.742 20.2815 6.39318L17.0039 8.68815C15.9296 7.06812 14.0895 6 12 6C8.68629 6 6 8.68629 6 12Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -166,35 +169,35 @@
     </script>
     <script>
         function openMailClient() {
-    try {
-        console.log('Opening mail client...');
+            try {
+                console.log('Opening mail client...');
 
-        const email = 'jkeventmanagement065@gmail.com';
-        const subject = 'Inquiry about Event Management Services';
-        const body = 'Hello,\n\nI would like to inquire about your event management services.\n\nThank you.';
+                const email = 'jkeventmanagement065@gmail.com';
+                const subject = 'Inquiry about Event Management Services';
+                const body = 'Hello,\n\nI would like to inquire about your event management services.\n\nThank you.';
 
-        if (!email) {
-            console.error('Error: Email address is empty.');
-            return;
+                if (!email) {
+                    console.error('Error: Email address is empty.');
+                    return;
+                }
+
+                const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                console.log('Generated mailto link:', mailtoLink);
+
+                // Create a temporary anchor element
+                const tempLink = document.createElement('a');
+                tempLink.href = mailtoLink;
+                tempLink.style.display = 'none';
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                document.body.removeChild(tempLink);
+
+                console.log('Mail client should open now.');
+
+            } catch (error) {
+                console.error('Error opening mail client:', error);
+            }
         }
-
-        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        console.log('Generated mailto link:', mailtoLink);
-
-        // Create a temporary anchor element
-        const tempLink = document.createElement('a');
-        tempLink.href = mailtoLink;
-        tempLink.style.display = 'none';
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        document.body.removeChild(tempLink);
-
-        console.log('Mail client should open now.');
-
-    } catch (error) {
-        console.error('Error opening mail client:', error);
-    }
-}
 
 
 
