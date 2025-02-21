@@ -35,6 +35,11 @@
         .img-box:hover img {
             transform: scale(1.1);
         }
+		@media (max-width: 768px) {
+			.container {
+				column-count: 2;
+			}
+		}
     </style>
 </head>
 
@@ -71,8 +76,6 @@
 		</div>
 	</header>
 	<h1 style="text-align: center; margin-top: 90px; font-family: 'Montserrat';">Event Gallery</h1>
-	<p style="text-align: center; margin-bottom: 5px; margin-top: 5px; font-family: 'Montserrat';">Click on any
-		image to view</p>
 	<div class="container">
 		<div class="img-box"><img src="Assets/1.jpg" alt="Event Image 1" /></div>
 		<div class="img-box"><img src="Assets/2.jpg" alt="Event Image 2" /></div>
